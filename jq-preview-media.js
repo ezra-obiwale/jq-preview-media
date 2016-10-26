@@ -1,6 +1,6 @@
 /**
  * @author Ezra Obiwale <contact@ezraobiwale.com>
- * @version 1.0
+ * @version 1.0.0
  */
 (function () {
     /**
