@@ -1,3 +1,7 @@
+/**
+ * @author Ezra Obiwale <contact@ezraobiwale.com>
+ * @version 1.0
+ */
 (function () {
     /**
      * Enables previewing media files before sending to server
