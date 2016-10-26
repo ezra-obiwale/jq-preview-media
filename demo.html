@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Previewing Media Files</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>jq-preview-media</h1>
+        <p>A JQuery plugin to enable preview of media files (images, videos, audios) before they are sent to the server.</p>
+
+        <h2>Usage</h2>
+
+        <h3>HTML</h3>
+
+        <h4>Image File</h4>
+        <img src="#" id="preview" />
+        <br />
+        <input type="file" id="file" accept="image/*" />
+
+        <h4>Video File</h4>
+        <video id="video-preview" controls autoplay>
+            Your browser does not support the video element.
+        </video>
+        <br />
+        <input type="file" id="video-file" accept="video/*" />
+
+        <h4>Audio File</h4>
+        <audio  id="audio-preview" controls autoplay>
+            Your browser does not support the audio element.
+        </audio>
+        <br />
+        <input type="file" id="audio-file" accept="audio/*" />
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+        crossorigin="anonymous"></script>
+        <script src="jq-preview-media.min.js"></script>
+        <script>
+            $('#file').previewMedia('#preview');
+            $('#video-file').previewMedia('#video-preview');
+            $('#audio-file').previewMedia('#audio-preview');
+        </script>
+    </body>
+</html>
