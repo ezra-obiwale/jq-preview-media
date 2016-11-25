@@ -27,6 +27,10 @@
                         $(previewElem).attr('src', URL.createObjectURL($(this)[0].files[0]));
                     }
                 }
+                else {
+                    $(previewElem).replaceWith('<strong>Your browser does not support media preview</strong>');
+                }
+
             });
         });
     };
