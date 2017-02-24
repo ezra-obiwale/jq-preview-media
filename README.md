@@ -1,17 +1,17 @@
 # jq-preview-media
 A JQuery plugin to enable preview of media files (images, videos, audios) before they are sent to the server.
 
-##Usage
+## Usage
 
-###HTML
+### HTML
 
-####Image File
+#### Image File
 ```html
 <img src="#" id="preview" />
 <input type="file" id="file" accept="image/*" />
 ```
 
-####Video File
+#### Video File
 ```html
 <video id="preview" controls autoplay>
 Your browser does not support the video element.
@@ -27,7 +27,7 @@ Your browser does not support the audio element.
 <input type="file" id="file" accept="audio/*" />
 ```
 
-###Javascript
+### Javascript
 ```javascript
 $('#file').previewMedia('#preview');
 ```
