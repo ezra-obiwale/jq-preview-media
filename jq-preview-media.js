@@ -23,9 +23,9 @@
                         }
                     };
                     reader.readAsDataURL($(this)[0].files[0]);
-                    if (previewElem) {
-                        $(previewElem).attr('src', URL.createObjectURL($(this)[0].files[0]));
-                    }
+                    if (!previewElem)
+                        previewElem = $(elem).siblings('img,audio,video');
+                    $(previewElem).attr('src', URL.createObjectURL($(this)[0].files[0]));
                 }
                 else {
                     $(previewElem).replaceWith('<strong>Your browser does not support media preview</strong>');

@@ -39,3 +39,5 @@ $('#file').previewMedia('#preview', function(data){
     // send data to server to be saved as the content
 });
 ```
+
+If no preview element is provided, sibling img, audio and video elements are used automatically.
