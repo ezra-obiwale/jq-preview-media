@@ -28,16 +28,52 @@ Your browser does not support the audio element.
 ```
 
 ### Javascript
+
 ```javascript
-$('#file').previewMedia('#preview');
+$('#file').previewMedia('#target');
 ```
 
-When the file is to be uploaded with ajax, provide a function as the second parameter. This would be
- provided with a data parameter containing the file content.
+To get the a url string representing the media or just know when the media has been changed, pass a callback as the second parameter.
+The callback would be passed a url string if a file is selected or nothing if nothing was selected.
+
 ```javascript
-$('#file').previewMedia('#preview', function(data){
-    // send data to server to be saved as the content
+$('#file').previewMedia('#target', function(url){
+    // process url
 });
 ```
 
 If no preview element is provided, sibling img, audio and video elements are used automatically.
+
+```javascript
+$('#file).previewMedia(); // preview on sibling media element
+```
+
+In the case of dynamically loaded content,
+
+```javascript
+$('body').previewMedia({
+    selector: '#file', // file input element
+    target: '#target' // img, audio or video element,
+    callback: function(url) {}
+}, callback);
+```
+
+The callback function may be put in the first parameter object or passed as the second parameter.
+
+To handle all files changes,
+
+```javascript
+$('body').previewMedia();
+```
+
+The above assumes that each file input element has a sibling media element.
+
+The optional callback can be passed as the only parameter:
+
+```javascript
+$('#file').previewMedia(callback);
+
+// or for dynamically loaded file elements
+
+$('body').previewMedia(callback);
+```
