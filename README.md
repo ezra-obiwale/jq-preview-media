@@ -45,7 +45,7 @@ $('#file').previewMedia('#target', function(url){
 If no preview element is provided, sibling img, audio and video elements are used automatically.
 
 ```javascript
-$('#file).previewMedia(); // preview on sibling media element
+$('#file').previewMedia(); // preview on sibling media element
 ```
 
 In the case of dynamically loaded content,
